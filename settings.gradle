@@ -1,0 +1,9 @@
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  'fm_boost_test/.android/include_flutter.groovy'
+))
+rootProject.name = "BoostTest"
+
+include ':fm_boost_test'
